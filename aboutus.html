@@ -2,26 +2,32 @@
 <html lang="en">
 
 <head>
-        <!--meta tags-->
+        <!--meta tags to make page responsive-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <!-- to add css file-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--to use font awesome,include fontawesome css file-->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <!--to use bootstrap-social icons,include bootstrap-social css file-->
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <!--to include style file-->
     <link rel="stylesheet" href="css/styles.css">
 
     <title>About us</title>
 </head>
 
 <body>
+    <!--to include navigation bar-->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
+            <!-- to make the nav bar responsive so that in case of small screens it doesn't hide the jumbotron content rather it collapse and changes to a toggle button-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-auto" href="./index.html">Ristorante Con Fusion</a>
+            <!-- the nav bar items which are to be collapsed-->
             <div class="collapse navbar-collapse" id="Navbar">
              <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-large "></span> Home</a></li>
@@ -58,20 +64,51 @@
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>About us</h3>
             </div>
-            <!--<div class="col-12">
-                <h2>About us</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
-            </div>-->
         </div>
 
 
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
-            </div>
-            <div class="col col-sm col-md">
+        <div class="row row-content ">
+            <div class="col-12 col-sm-6">
                 <h2>Weekend Grand Buffet</h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            </div>
+
+            <!-- To include CARDS in the webpage-->
+            <div class="col col-sm">
+                <div class="card">
+                     <!-- To set the head of card-->
+                    <h3 class="card-header bg-primary text-white">Facts At a Glance</h3>
+                    <div class="card-body">
+                         <!--Description List -->
+                        <dl class="row">
+                            <!--description title -->
+                            <dt class="col-6">Started</dt>
+                            <!-- description details-->
+                            <dd class="col-6">3 Feb. 2013</dd>
+                            <dt class="col-6">Major Stake Holder</dt>
+                            <dd class="col-6">HK Fine Foods Inc.</dd>
+                            <dt class="col-6">Last Year's Turnover</dt>
+                            <dd class="col-6">$1,250,375</dd>
+                            <dt class="col-6">Employees</dt>
+                            <dd class="col-6">40</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <!--another card using blockquote and cite tag -->
+            <div class="col-12 row-content">
+                <div class="card card-body bg-light">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">You better cut the pizza in four pieces because
+                            I'm not hungry enough to eat six.</p>
+                        <footer class="blockquote-footer">Yogi Berra,
+                            <!-- to add the source of the code ,author-->
+                            <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
+                            P. Pepe, Diversion Books, 2014</cite>
+                        </footer>
+                    </blockquote>
+                </div>
             </div>
         </div>
 
@@ -85,6 +122,58 @@
                 <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
             </div>
         </div>
+
+        <!--to add table and do styling using bootstrap classes like table responsive and table-stripped -->
+         <div class="row row-content">
+            <div class="col-12 col-sm-9">
+                <h2>Facts &amp; Figures</h2>
+                   <div class="table-responsive">
+                    <table class="table table-striped">
+                        <!--to definr thr head of the table -->
+                        <thead class="thead-dark">
+                            <tr>
+                                <!-- to define a header cell in table-->
+                                <th>&nbsp;</th>
+                                <th>2013</th>
+                                <th>2014</th>
+                                <th>2015</th>
+                            </tr>
+                        </thead>
+                        <!--to define the body of the table -->
+                        <tbody>
+                            <tr>
+                                <th>Employees</th>
+                                <td>15</td>
+                                <td>30</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <th>Guests Served</th>
+                                <td>15000</td>
+                                <td>45000</td>
+                                <td>100,000</td>
+                            </tr>
+
+                            <tr>
+                                <th>Special Events</th>
+                                <td>3</td>
+                                <td>20</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <th>Annual Turnover</th>
+                                <td>$251,325</td>
+                                <td>$1,250,375</td>
+                                <td>~$3,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+             <div class="col-12 col-sm-3">
+            </div>
+       </div> 
+
     </div>
 
     <footer class="footer">
@@ -101,10 +190,12 @@
                 </div>
                 <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
+                    <!--using address tag writes the address in diff font (italics) -->
                     <address>
 		              121, Clear Water Bay Road<br>
 		              Clear Water Bay, Kowloon<br>
 		              HONG KONG<br>
+                      <!--using font awesome to add icons using <i> tag or <span> tag -->
 		              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
                       <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
                       <i class="fa fa-envelope fa-lg"></i>: 
@@ -113,6 +204,7 @@
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <div class="text-center">
+                        <!--to use font-awesome icons as buttons and add button classes of bootstrap -->
                          <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
                         <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
                         <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
@@ -130,6 +222,7 @@
         </div>
     </footer>
         <!-- to add javascript file(in order)-->
+        <!--javascript code is added at the end bcoz it takes time to load the js content .so if we write this code in begining we will nothing to show to user for sometime when user loads the page -->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
