@@ -15,6 +15,7 @@
     margin:0px auto;
     padding: 20px 0px 20px 0px;
 }
+
 .jumbotron {
     padding:70px 30px 70px 30px;
     margin:0px auto;
@@ -27,6 +28,7 @@ address{
     margin:0px;
     color:#0f0f0f;
 }
+
 body{
     padding:50px 0px 0px 0px;
     z-index:0;
@@ -42,6 +44,7 @@ body{
     border-bottom: 1px solid #ddd;
     padding: 10px;
 }
+/* to give background color to  image of carousel*/
 .carousel {
     background:#512DA8;
 }
@@ -55,4 +58,10 @@ body{
     top: 0;
     left: 0;
     min-height: 300px;
+}
+/* to shift the play and pause button at the right end of carousel */
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
 }
