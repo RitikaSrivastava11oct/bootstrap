@@ -160,14 +160,19 @@
 
                       <!-- to add play and pause button to carousel.
                         its functioning is implemented by javascript code written at the end of the page-->
-                  <div class="btn-group" id="carouselButton">
+            <!-- <div class="btn-group" id="carouselButton">
                     <button class="btn btn-danger btn-sm" id="carousel-pause">
                         <span class="fa fa-pause"></span>
                     </button>
                     <button class="btn btn-danger btn-sm" id="carousel-play">
                         <span class="fa fa-play"></span>
                     </button>
-                  </div>
+                 </div> -->
+
+                  <!-- to use only one button to play and pause the carousel by changinh the above code and also javascript code-->
+                  <button class="btn btn-danger btn-sm" id="carouselButton"> 
+                    <span class="fa fa-pause"></span>
+                  </button>
 
                 </div> <!-- end of mycarousel-->
                    
@@ -287,8 +292,8 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
         </script>
-        <!--to give functioning to play and pause button added in the carousel -->
-        <script>
+        <!--to give functioning to play and pause button added in the carousel  -->
+        <!-- <script>
         $(document).ready(function(){
             $("#mycarousel").carousel( { interval: 2000 } );
             $("#carousel-pause").click(function(){
@@ -298,6 +303,29 @@
                 $("#mycarousel").carousel('cycle');
             });
         });
+        </script> -->
+
+        <!-- javascript code to do play and pause of carousel through a single button only-->
+        <script>
+            $(document).ready(function(){
+                $("#mycarousel").carousel( { interval: 2000 } );
+                $("#carouselButton").click(function(){
+                    /* first we need to identify which button it is right now i.e play aur pause,using if*/
+
+                    if($("#carouselButton").children('span').hasClass('fa fa-pause'))
+                    {
+                        $("#mycarousel").carousel('pause');
+                        $("#carouselButton").children('span').removeClass('fa fa-pause');
+                        $("#carouselButton").children('span').addClass('fa fa-play');
+                    }
+                    else
+                    {
+                        $("#mycarousel").carousel('cycle');
+                        $("#carouselButton").children('span').removeClass('fa fa-play');
+                        $("#carouselButton").children('span').addClass('fa fa-pause');
+                    }
+                });
+            });
         </script>
 
 
