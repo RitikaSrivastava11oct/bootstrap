@@ -98,7 +98,7 @@
                         data-placement="bottom" href="#reserveform">Reserve Table</a> -->
 
                         <!-- now we are using reserve table as button to open form and not as a tooltip-->
-                        <button class="btn btn-block btn-warning" onclick="displayForm()"> Reserve Table</button>
+                        <a href="#form-card" class="btn btn-block btn-warning"> Reserve Table</a>
                     </div>
                 </div>
             </div>
@@ -216,7 +216,7 @@
                 <div class="media">
                     <div class="media-body">
                         <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                     </div>
                     <img src="img/Buffet.png" align="Buffet" class="img-thumbnail align-self-center">
                 </div>
@@ -250,9 +250,9 @@
         
        
                 
-        <div class="row row-content" >
-            <div class="col-12 col-sm-8 col">
-                <div class="card" id="form-card">
+        <div class="row row-content justify-content-center" id="form-card">
+            <div class="col-12 col-sm-offset-4 col-sm-8">
+                <div class="card">
                     <h3 class="card-header text-white card-header-color">Reserve a Table</h3>
                     <div class="card-body">
                         <form>
@@ -387,13 +387,7 @@
             });
         </script>
 
-        <!-- code to open the form in card ny click og Reserve Table button-->
-        <script>
-            function displayForm()
-            {
-                document.getElementById("form-card");
-            }
-        </script> 
+        
 
 
 </body>
