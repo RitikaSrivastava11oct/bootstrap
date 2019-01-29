@@ -77,6 +77,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- to add modal to click of reserve button-->
+        
+
+
+
+        <!--  end of modal at the click of reserve button-->
+
     </div>
 
     <header>
@@ -98,12 +106,85 @@
                         data-placement="bottom" href="#reserveform">Reserve Table</a> -->
 
                         <!-- now we are using reserve table as button to open form and not as a tooltip-->
-                        <a href="#form-card" class="btn btn-block btn-warning"> Reserve Table</a>
+                        <!-- <a href="#form-card" class="btn btn-block btn-warning"> Reserve Table</a> -->
+
+                        <!-- now we are using the reserve table as a link to trigger a modal-->
+                        <a class="btn btn-block btn-warning" data-toggle="modal" data-target="#modalReserveTable">Reserve Table</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <div class="modal fade" id="modalReserveTable">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reserve Table</h4>
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row row row-content1">
+                                <div class="col-sm-2">
+                                 <label>Number of Guests</label>   
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-5 ">
+                                  <fieldset id="group2">
+                                    <input type="radio" value="value1" name="group2"> 1
+                                    <input type="radio" value="value2" name="group2"> 2
+                                    <input type="radio" value="value3" name="group2"> 3
+                                    <input type="radio" value="value1" name="group2"> 4
+                                    <input type="radio" value="value2" name="group2"> 5
+                                    <input type="radio" value="value3" name="group2"> 6
+                                  </fieldset>
+                                </div>
+                            </div>
+
+                             <div class="form-row row row-content1">
+                                <div class="col-sm-2">
+                                    <label>Section</label>
+                                </div>
+                                <div class=" btn-group col-sm-5 btn-group-toggle" data-toggle="buttons">
+                                 <label class="btn btn-danger active ">
+                                    <input type="radio" name="options" id="option1" autocomplete="off"checked> Non-smoking
+                                 </label>
+                                 <label class="btn btn-success">
+                                    <input type="radio" name="options" id="option2" autocomplete="off">Smoking
+                                 </label>
+                                </div>
+                                
+                                
+                            </div>
+
+                            <div class="form-row row row-content1">
+                                <div class="col-4 col-sm-2">
+                                 <label>Date and Time</label>   
+                                </div>
+                                    <div class="col-2 col-sm-offset-1 col-sm-2">
+                                        <input type="text" placeholder="Date" id="dateInForm" class="form-control">
+                                    </div>
+                                    <div class="col-2 col-sm-2">
+                                        <input type="text" placeholder="Time" id="TimeInForm" class="form-control">
+                                  
+                                    </div>
+                                
+                            </div>
+                           
+                            <div class="form-row row-content1">
+                                 <button type="button" class="btn btn-secondary offset-2" data-dismiss="modal">Cancel</button>
+                                <button class="button-reserve-color btn ml-1 ">Reserve</button>
+                                
+                            </div>
+
+                        </form>
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+
 
     <div class="container">
         <!-- a row is added to add the carousel-->
