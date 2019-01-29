@@ -87,15 +87,18 @@
                         <h1>Ristorante con Fusion</h1>
                         <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                     </div>
-                    <div class="col-12 col-sm-4 align-self-center align-items-center">
+                    <div class="col-12 col-sm-3 align-self-center align-items-center">
                         <img src="img/logo.png" class="img-fluid">
                         
                     </div>
                      <!-- code to desing tooltip and to add this tooltip we will write the code inside nav bar also we add javascript code at the end-->
-                   <div class="col-12 col-sm-2 align-self-center">
-                        <a role="button" class="btn btn-block nav-link btn-warning"
+                   <div class="col-12 col-sm-3 align-self-center">
+                        <!-- <a role="button" class="btn btn-block nav-link btn-warning"
                         data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#reserveform">Reserve Table</a>
+                        data-placement="bottom" href="#reserveform">Reserve Table</a> -->
+
+                        <!-- now we are using reserve table as button to open form and not as a tooltip-->
+                        <button class="btn btn-block btn-warning" onclick="displayForm()"> Reserve Table</button>
                     </div>
                 </div>
             </div>
@@ -126,7 +129,7 @@
                                <img class="d-block img-fluid"
                                 src="img/Buffet.png" alt="Buffet">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2>This Month's Promotions </h2>
+                                <h2>This Month's Promotions</h2>
                                 <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                             </div>
                         </div>
@@ -184,7 +187,7 @@
 
         <!-- to add the content of website-->
         <!-- to add the first row -->
-        <div class="row row-content align-items-center">
+        <div class="row row-content align-items-center" >
             <!-- to add this text at the last using order-sm-last -->
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -206,12 +209,17 @@
 
         <!-- to add the second row -->
         <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
+            <div class="col-12 col-sm-4 col-md-3 order-sm-first">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <div class="col col-sm col-md order-sm-last">
+                <div class="media">
+                    <div class="media-body">
+                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <img src="img/Buffet.png" align="Buffet" class="img-thumbnail align-self-center">
+                </div>
             </div>
         </div>
 
@@ -235,8 +243,59 @@
                     </p>
                 </div>
             </div>
+
                 
             </div>
+        </div>
+        
+       
+                
+        <div class="row row-content" >
+            <div class="col-12 col-sm-8 col">
+                <div class="card" id="form-card">
+                    <h3 class="card-header text-white card-header-color">Reserve a Table</h3>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row row row-content1">
+                                <div class="col-sm-2">
+                                 <label>Number of Guests</label>   
+                                </div>
+                                <div class="col-sm-8">
+                                  <fieldset id="group2">
+                                    <input type="radio" value="value1" name="group2"> 1
+                                    <input type="radio" value="value2" name="group2"> 2
+                                    <input type="radio" value="value3" name="group2"> 3
+                                    <input type="radio" value="value1" name="group2"> 4
+                                    <input type="radio" value="value2" name="group2"> 5
+                                    <input type="radio" value="value3" name="group2"> 6
+                                  </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-row row row-content1">
+                                <div class="col-sm-2">
+                                 <label>Date and Time</label>   
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" placeholder="Date" id="dateInForm" class="form-control">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="text" placeholder="Time" id="TimeInForm" class="form-control">
+                                  
+                                </div>
+                            </div>
+                            <div class="form-row row-content1">
+                                <button class="button-reserve-color btn offset-2">Reserve</button>
+                                
+                            </div>
+
+                        </form>
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
         </div>
     </div>
 
@@ -287,11 +346,11 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- to activate the tooltip we need to write javascript code-->
-        <script>
+        <!-- <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
-        </script>
+        </script> -->
         <!--to give functioning to play and pause button added in the carousel  -->
         <!-- <script>
         $(document).ready(function(){
@@ -327,6 +386,14 @@
                 });
             });
         </script>
+
+        <!-- code to open the form in card ny click og Reserve Table button-->
+        <script>
+            function displayForm()
+            {
+                document.getElementById("form-card");
+            }
+        </script> 
 
 
 </body>

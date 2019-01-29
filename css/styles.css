@@ -18,6 +18,13 @@
   margin: 0px auto;
   padding: 20px 0px;
 }
+.card-header-color{
+  background: #f5c147;
+}
+.button-reserve-color{
+  background: #2a82f6;
+  color: #e2f7ff
+}
 .jumbotron {
   margin:0px auto;
   padding: 70px 30px;
