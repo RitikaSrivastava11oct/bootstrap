@@ -21,6 +21,13 @@
 .card-header-color{
   background: #f5c147;
 }
+.modal-head{
+background: #4f2e9f
+}
+.modal-body-color{
+background: #d0c2e6
+}
+
 .button-reserve-color{
   background: #2a82f6;
   color: #e2f7ff
